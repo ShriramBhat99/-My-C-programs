@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<conio.h>
 void main()
-{    int num,i,sum,n,r; 
+{    int num,i,sum=0,n,r=0; 
      clrscr(); 
      printf("Enter a number\n"); 
      scanf("%d",&n); 
@@ -13,9 +13,9 @@ void main()
          sum=sum*10+r;
      }
      if(num==sum)
-          printf(" Given number is a palindrome ");
+          printf(" Given number is a palindrome\n ");
       else
-        printf(" Given number is not a palindrome ");
+        printf(" Given number is not a palindrome\n ");
 
     printf("Reverse of the %d is %d",num,sum);
     getch();
