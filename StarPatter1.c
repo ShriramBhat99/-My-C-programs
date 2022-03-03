@@ -1,3 +1,10 @@
+/* C program to Print the following  Star Pattern
+                 *
+                * *
+               * * *
+              * * * *
+             * * * * *
+*/
 #include<stdio.h>
 #include<conio.h>
 void main() 
