@@ -1,3 +1,4 @@
+/* C program to check given number is Palindrome or not */
 #include<stdio.h>
 #include<conio.h>
 void main()
