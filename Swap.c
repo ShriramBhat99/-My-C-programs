@@ -1,7 +1,7 @@
 /* C Program to swap two numbers without using third variable */
 #include<stdio.h>
 #include<conio.h>
-void main()
+int main()
 {
     int a,b;
     clrscr();
@@ -15,4 +15,6 @@ void main()
     b=a-b;
     a=a-b;
     printf("After Swapping\n");
-}   printf("First number A=%d\n Second number B=%d\n",a,b);
+    printf("First number A=%d\n Second number B=%d\n",a,b);
+    return 0;
+}
