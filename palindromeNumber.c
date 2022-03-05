@@ -1,7 +1,7 @@
 /* C program to check given number is Palindrome or not */
 #include<stdio.h>
 #include<conio.h>
-void main()
+int main()
 {    int num,i,sum=0,n,r=0; 
      clrscr(); 
      printf("Enter a number\n"); 
@@ -20,5 +20,6 @@ void main()
 
     printf("Reverse of the %d is %d",num,sum);
     getch();
+    return 0;
 }
 
