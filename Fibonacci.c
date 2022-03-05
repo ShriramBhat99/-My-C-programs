@@ -1,7 +1,7 @@
 /* C Program For printing Fibonacii Series */
 #include<stdio.h>
 #include<conio.h>
-void main()
+int main()
 {
     int n1=0,n2=1,sum,i,n;
     clrscr();
@@ -15,5 +15,6 @@ void main()
         n2=sum;
     }
     getch();
+    return 0;
     
 }
