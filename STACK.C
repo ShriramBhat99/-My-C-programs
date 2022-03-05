@@ -1,3 +1,4 @@
+/* C program to demonstrate Stack operations*/
 #include<stdio.h>
 #include<conio.h>
 #define MAX 10
