@@ -44,7 +44,7 @@ int display()
     }
     else
     {
-       for(i=0;i<=top;i++)
+       for(i=top;i>=0;i--)
        {
 	   printf("%d\t",stack[i]);
 	}
