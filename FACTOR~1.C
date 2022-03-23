@@ -3,7 +3,7 @@
 #include<conio.h>
 int factorial(int n)
 {
-    int fact;
+   
     if(n==0||n==1)
     {
         return 1;
@@ -11,18 +11,17 @@ int factorial(int n)
     }
     else
     {
-        fact=n*factorial(n-1);
-        return fact;
+        return n*factorial(n-1);
+        
     }
 }
 int main()
 {
-    int n,fact;
+    int n;
     clrscr();
     printf("Enter the Number\n");
     scanf("%d",&n);
-    fact=factorial(n);
-    printf("Factorial of %d is %d",n,fact);
+    printf("Factorial of %d is %d",n,factorial(n));
     getch();
     return 0;
 }
