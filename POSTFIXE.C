@@ -33,8 +33,7 @@ int ev_postfix(char *postfix)
 		}
 
 	}
-	return res;
-
+	return stack[top];
 }
 
 int operation(char operators, int op1, int op2)
