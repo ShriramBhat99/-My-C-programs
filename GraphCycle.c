@@ -39,8 +39,7 @@ int DFS(int i, int a[20][20], int visit[20], int n)
 		
 		for(j=1;j<=n;j++)
 		{
-		   if(!visit[j])
-		       visit[j]=1;
+		 
 		   if(visit[j])
 		       count++; 
 	    }
