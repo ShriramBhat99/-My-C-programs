@@ -1,5 +1,6 @@
 /* C program to find peak element in given bitonic array */
 #include<stdio.h>
+#include<conio.h>
 int bitonic(int*,int,int,int);
 int main()
 {
@@ -10,6 +11,7 @@ int main()
 	for(i=0;i<n;scanf("%d",&a[i++]));
 	res=bitonic(a,0,n-1,n-1);
 	    printf("peak elements is %d",res);
+	    getch();
 	    return 0;
 }
 int bitonic(int *a,int min,int max,int n)
