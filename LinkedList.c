@@ -8,6 +8,7 @@ struct list
 	struct list *link;
 };
 typedef struct list node;
+int count=0;
 node *start=NULL;
 node* getnode()
 {
@@ -30,6 +31,7 @@ void insertBegin(int item)
 	new_node->data=item;
 	new_node->link = start;
 	start=new_node;
+	count++;
 }
 
 void insertEnd(int item)
@@ -54,6 +56,7 @@ void insertEnd(int item)
 	}
 	cur_node->link=new_node;
 	printf("Node inserted at the end successfully\n");
+	count++;
 	return;
 }
 
@@ -68,6 +71,7 @@ void insertPosition(int item,int pos)
 	{
 		new_node->link=start;
 		start=new_node;
+		count++;
 		return;
 	}
 	prev_node=start;
@@ -84,6 +88,7 @@ void insertPosition(int item,int pos)
      new_node->link=prev_node->link;
      prev_node->link=new_node;
      printf("Node inserted successfully\n");
+     count++;
      return ;
 }
 
@@ -100,6 +105,7 @@ void deleteBegin()
 	start=start->link;
 	printf("Data removed=%d\n",temp->data);
 	free(temp);
+	count--;
 }
 
 
@@ -120,6 +126,7 @@ void deleteEnd()
 	temp2->link=NULL;
 	printf("Data removed=%d\n",temp->data);
 	free(temp);
+	count--;
 
 }
 
@@ -139,6 +146,7 @@ void deletePosition(int pos)
 		start=start->link;
 		printf("Data removed=%d\n",temp->data);
 		free(temp);
+		count--;
 		return;
 	}
 	for(i=1;i<pos;i++)
@@ -149,6 +157,7 @@ void deletePosition(int pos)
 	printf("Data removed=%d\n",temp->data);
 		temp2->link=temp->link;
 	free(temp);
+	count--;
 	return;
 }
 
@@ -170,7 +179,15 @@ void display()
 	   }
 	   return;
 }
-
+void freeNode()
+{
+	node *temp;
+	temp=start;
+	if(start!=NULL)
+	start=start->link;
+	free(temp);
+	count--;
+}
 int main()
 {
 	int item,choice,pos;
@@ -205,7 +222,9 @@ int main()
 			       break;
 			case 7: display();
 			        break;
-			default: exit(0);
+			default:  while(count!=0)
+			               freeNode();
+			          exit(0);
 				   
 		}
 	}
