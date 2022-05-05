@@ -14,7 +14,7 @@ return 0;
 }
 int Prime(int n)
 {
-      int num=3,sign,prime,i,j;
+      int num=3,sign,prime,i=2,j;
 	if(n==1)
 		return 2;
 	else
@@ -23,7 +23,7 @@ int Prime(int n)
 			{
 				sign=0;
 
-				for(j=2;j<num;j++)
+				for(j=2;j<=(num/2);j++)
 
 				{
 				    if(num%j==0)
