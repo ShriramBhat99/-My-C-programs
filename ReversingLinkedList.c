@@ -81,7 +81,7 @@ node* reverse(node *head)
 int main()
 {
    int n,i,item;
-   node *head=NULL;
+   node *head=NULL,temp;
    clrscr();
    printf("Enter how may elements do you want to insert\n");
    scanf("%d",&n);
@@ -97,6 +97,14 @@ int main()
    printf("Reversed linked list elements are:\n");
    head=reverse(head);
    display(head);
+    while(n!=0)
+    {
+	    temp=head;
+	    if(head!=NULL)
+	    head=head->link;
+	    free(temp);
+	     n--;
+    }
    getch();
    return 0;
    	
