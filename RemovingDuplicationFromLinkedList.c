@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
+int n=0;
 struct list
 {
 	int data;
@@ -77,6 +78,7 @@ void duplicate(node* start)
 
 		 pre->link=next->link;
 		 next=next->link;
+		n--;
 	   }
 	   else
 	   {
@@ -98,8 +100,8 @@ void duplicate(node* start)
 }
 int main()
 {
-	int item,n,i;
-	node* start=NULL;
+	int item,i;
+	node *start=NULL,*temp;
 	clrscr();
 	printf("Enter the number of elements to be insert\n");
 	scanf("%d",&n);
@@ -114,6 +116,15 @@ int main()
 	duplicate(start);
 	printf("Linked list after removal of duplicate elements\n");
 	display(start);
+	while(n!=0)
+	{
+		temp=start;
+		if(start!=NULL)
+			start=start->link;
+		free(temp);
+		n--;
+		
+	}
 	getch();
 	return 0;
 }
