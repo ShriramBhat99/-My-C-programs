@@ -1,10 +1,11 @@
-#include<stdio.h>
 /* C Program to find occurence of the string in an given string*/
 
+#include<stdio.h>
 #include<string.h>
 int main()
 {
-	char s1[20],s2[20],s3[10];int count=0,i,j,k;
+	char s1[20]={'\0'},s2[20]={'\0'},s3[10]={'\0'};
+	int count=0,i,j,k=0;
 	printf("Enter first string\n");
 	scanf("%s",s1);
 	printf("Enter second string\n");
@@ -23,5 +24,5 @@ int main()
 		       count++;
 		k=0;      
 	}
-	printf("%d",count);
+	printf("%d\n",count);
 }
