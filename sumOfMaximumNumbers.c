@@ -29,3 +29,4 @@ int main()
 	printf("\n");
 	printf("Sum=%d",sum);
 }
+printf("hii");
