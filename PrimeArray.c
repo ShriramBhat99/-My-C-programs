@@ -1,3 +1,4 @@
+/* C Program to find sum of all prime numbers in a given array */
 #include<stdio.h>
 #include<conio.h>
 int main()
