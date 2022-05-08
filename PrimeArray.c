@@ -27,7 +27,10 @@ int main()
         flag=0;
 
     }
-    printf("is  %d\n",sum);
+    if(sum==0)
+         printf(" 0 is 0\n");
+    else
+         printf("is  %d\n",sum);
     return 0;
     getch();
 
